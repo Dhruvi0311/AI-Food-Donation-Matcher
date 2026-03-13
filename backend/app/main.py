@@ -4,7 +4,11 @@ from . import models
 
 models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="AI Food Donation Matcher")
+app = FastAPI(
+    title="AI Food Donation Matcher",
+    description="An AI-powered platform that connects food donors with nearby NGOs to reduce food waste.",
+    version="1.0.0"
+)
 
 @app.get("/")
 def home():
